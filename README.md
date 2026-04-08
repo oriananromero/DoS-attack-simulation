@@ -56,7 +56,7 @@ for i in {1..10}; do (while true; do curl -s 172.17.0.5 > /dev/null; done &); do
 
 ## 📂 Archivos Adjuntos
 - *Grabación en tiempo real* del dashboard durante el ataque.
-  ![grafana-charts](https://github.com/user-attachments/assets/3c3ea8cf-98e1-4c38-8499-18f5c892222e)
+  ![grafana-charts](https://github.com/user-attachments/assets/11d5b136-e15e-43cb-a5f9-17678c053335)
 
 
 - Captura de pantalla de dashboard para Trafico de red (Capa 7)
