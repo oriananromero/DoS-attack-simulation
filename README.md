@@ -16,6 +16,7 @@ Este proyecto consiste en la implementación de un entorno de laboratorio contro
 
 ## 🚀 Metodología del Experimento
 1. **Configuración del Dashboard**
+   
   Se diseñaron dos paneles de control en Grafana utilizando lenguaje PromQL:
 
   * Métrica de Red: Visualización de tráfico entrante en eth0 mediante irate.
@@ -23,6 +24,7 @@ Este proyecto consiste en la implementación de un entorno de laboratorio contro
   * Métrica de CPU: Cálculo del porcentaje de uso real, restando el tiempo de inactividad (idle state).
 
 2. **Ejecución del Ataque**
+   
   Se utilizó un script de persistencia en el nodo atacante para generar un flujo masivo de peticiones HTTP:
 
 `` 
@@ -31,6 +33,7 @@ for i in {1..10}; do (while true; do curl -s 172.17.0.5 > /dev/null; done &); do
 Este comando lanza múltiples procesos en segundo plano, garantizando que el tráfico no se detenga incluso si una petición individual falla.
 
 3. **Fase de Mitigación y Persistencia**
+   
   Durante el experimento, se intentó mitigar el ataque mediante killall curl. Se observó un fenómeno de persistencia, donde los procesos "padre" (bucles while) regeneraban el tráfico instantáneamente, manteniendo la CPU al   100% de saturación.
 
 ## 📊 Resultados Observados
