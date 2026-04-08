@@ -55,7 +55,9 @@ for i in {1..10}; do (while true; do curl -s 172.17.0.5 > /dev/null; done &); do
 **Impacto de Capa 7:** No se necesita un ancho de banda masivo para tumbar un servidor; basta con saturar su CPU procesando peticiones legítimas.
 
 ## 📂 Archivos Adjuntos
-- *Grabación en tiempo real* del dashboard durante el ataque. Se puede encontrar en **/assets/grafana-charts.mp4**
+- *Grabación en tiempo real* del dashboard durante el ataque.
+  ![grafana-charts](https://github.com/user-attachments/assets/3c3ea8cf-98e1-4c38-8499-18f5c892222e)
+
 
 - Captura de pantalla de dashboard para Trafico de red (Capa 7)
 <img width="1196" height="521" alt="grafana_capture" src="https://github.com/user-attachments/assets/0d0a627f-3b98-42ab-b17a-8d3ad56be215" />
