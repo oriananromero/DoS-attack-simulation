@@ -4,7 +4,7 @@
 Este proyecto consiste en la implementación de un entorno de laboratorio controlado para simular ataques de Denegación de Servicio (DoS) en la Capa 7 (Aplicación). El objetivo es analizar el impacto directo del tráfico malicioso sobre los recursos críticos del sistema (CPU y Red) utilizando herramientas de monitoreo profesional.
 
 ## 🛠️ Stack Tecnológico
--**Orquestación de Red:** Emulador de red basado en web desarrollado por Ariel Villalobos. ([https://github.com/RArielVillalobos/open-veth]).
+- **Orquestación de Red:** Emulador de red basado en web desarrollado por Ariel Villalobos. ([https://github.com/RArielVillalobos/open-veth]).
 
 - **Entorno:** Contenedores Docker vía OpenVeth.
 
