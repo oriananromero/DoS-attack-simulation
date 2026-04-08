@@ -56,21 +56,21 @@ for i in {1..10}; do (while true; do curl -s 172.17.0.5 > /dev/null; done &); do
 
 ## 📂 Archivos Adjuntos
 - *Grabación en tiempo real* del dashboard durante el ataque.
-![grafana-charts](https://github.com/user-attachments/assets/11d5b136-e15e-43cb-a5f9-17678c053335)
+   ![grafana-charts](https://github.com/user-attachments/assets/11d5b136-e15e-43cb-a5f9-17678c053335)
 
 
 - Captura de pantalla de dashboard para Trafico de red (Capa 7)
-<img width="1196" height="521" alt="grafana_capture" src="https://github.com/user-attachments/assets/0d0a627f-3b98-42ab-b17a-8d3ad56be215" />
+   <img width="1196" height="521" alt="grafana_capture" src="https://github.com/user-attachments/assets/0d0a627f-3b98-42ab-b17a-8d3ad56be215" />
 
-*config:*  `` irate(node_network_receive_bytes_total{device="eth0"}[5m]) ``
+   *config:*  `` irate(node_network_receive_bytes_total{device="eth0"}[5m]) ``
 
 - Captura de pantalla de dashboard para Uso de CPU
-<img width="800" height="303" alt="image" src="https://github.com/user-attachments/assets/b1522f41-205d-456a-8518-94dc2fb71277" />
+   <img width="800" height="303" alt="image" src="https://github.com/user-attachments/assets/b1522f41-205d-456a-8518-94dc2fb71277" />
 
-*config:* `` 100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) ``
+   *config:* `` 100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) ``
 
 - Captura de pantalla de OpenVeth
-<img width="1920" height="871" alt="image" src="https://github.com/user-attachments/assets/f4f25cab-9add-40d6-ad20-af9d3ba3c2f1" />
+   <img width="1920" height="871" alt="image" src="https://github.com/user-attachments/assets/f4f25cab-9add-40d6-ad20-af9d3ba3c2f1" />
 
 
   
