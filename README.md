@@ -31,7 +31,7 @@ Este proyecto consiste en la implementación de un entorno de laboratorio contro
 for i in {1..10}; do (while true; do curl -s 172.17.0.5 > /dev/null; done &); done
 ``
 
-Este comando lanza múltiples procesos en segundo plano, garantizando que el tráfico no se detenga incluso si una petición individual falla.
+*Este comando lanza múltiples procesos en segundo plano, garantizando que el tráfico no se detenga incluso si una petición individual falla.*
 
 3. **Fase de Mitigación y Persistencia**
    
