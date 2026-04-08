@@ -1,9 +1,9 @@
-#🛡️ Simulación de Ataque DoS y Monitoreo en Tiempo Real
+# 🛡️ Simulación de Ataque DoS y Monitoreo en Tiempo Real
 
-##📝 Descripción
+## 📝 Descripción
 Este proyecto consiste en la implementación de un entorno de laboratorio controlado para simular ataques de Denegación de Servicio (DoS) en la Capa 7 (Aplicación). El objetivo es analizar el impacto directo del tráfico malicioso sobre los recursos críticos del sistema (CPU y Red) utilizando herramientas de monitoreo profesional.
 
-##🛠️ Stack Tecnológico
+## 🛠️ Stack Tecnológico
 -**Orquestación de Red:** Emulador de red basado en web desarrollado por Ariel Villalobos. ([https://github.com/RArielVillalobos/open-veth]).
 
 - **Entorno:** Contenedores Docker vía OpenVeth.
@@ -14,7 +14,7 @@ Este proyecto consiste en la implementación de un entorno de laboratorio contro
 
 - **Monitoreo:** Prometheus (Recolección de datos) y Grafana (Visualización).
 
-#🚀 Metodología del Experimento
+# 🚀 Metodología del Experimento
 1. **Configuración del Dashboard**
   Se diseñaron dos paneles de control en Grafana utilizando lenguaje PromQL:
 
@@ -33,7 +33,7 @@ Este comando lanza múltiples procesos en segundo plano, garantizando que el tr�
 3. **Fase de Mitigación y Persistencia**
   Durante el experimento, se intentó mitigar el ataque mediante killall curl. Se observó un fenómeno de persistencia, donde los procesos "padre" (bucles while) regeneraban el tráfico instantáneamente, manteniendo la CPU al   100% de saturación.
 
-#📊 Resultados Observados
+# 📊 Resultados Observados
 
 **Correlación Crítica:** Se grabó en video cómo el incremento súbito en la tasa de transferencia de red (Bytes/sec) dispara el consumo de CPU de forma casi inmediata, llevando al servidor a un estado de Resource Exhaustion (Agotamiento de Recursos).
 
@@ -43,14 +43,14 @@ Este comando lanza múltiples procesos en segundo plano, garantizando que el tr�
 
 **Recuperación:** Requirió un reinicio de los servicios (docker restart) para limpiar los procesos huérfanos y estabilizar las métricas.
 
-#🧠 Lecciones Aprendidas
+# 🧠 Lecciones Aprendidas
 **Visibilidad:** Sin monitoreo (Grafana), un ataque DoS es invisible hasta que el servicio cae; con él, podemos reaccionar en segundos.
 
 **Persistencia:** Matar el proceso final (curl) no siempre es suficiente si el atacante usa scripts de automatización.
 
 **Impacto de Capa 7:** No se necesita un ancho de banda masivo para tumbar un servidor; basta con saturar su CPU procesando peticiones legítimas.
 
-#📂 Archivos Adjuntos
+# 📂 Archivos Adjuntos
 - *Grabación en tiempo real* del dashboard durante el ataque. Se puede encontrar en **/assets/grafana-charts.mp4**
 
 - Captura de pantalla de dashboard para Trafico de red (Capa 7)
